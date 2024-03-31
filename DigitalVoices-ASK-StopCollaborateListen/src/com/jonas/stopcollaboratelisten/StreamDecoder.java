@@ -234,7 +234,9 @@ public class StreamDecoder implements Runnable {
 	    durationsToRead = 1;
 	  } else {
 		  if (contendingForSOS)
-			  handler.sendEmptyMessage(SessionService.MSG_RECEIVED_BAD_BROADCAST);
+			  {
+			      handler.sendEmptyMessage(SessionService.MSG_RECEIVED_BAD_BROADCAST);
+			  }
 		  
 	    try {
 	      buffer.delete(Constants.kSamplesPerDuration);
